@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ProfileActioinButton: View {
+struct ProfileEditAreaButton: View {
     // MARK: - プロパティー
     /// タイトル
     var title: String
@@ -50,5 +50,5 @@ struct ProfileActioinButton: View {
 }
 
 #Preview {
-    ProfileActioinButton(title: "プロフィールを編集")
+    ProfileEditAreaButton(title: "プロフィールを編集")
 }
