@@ -19,6 +19,8 @@
 		3B9496602B25AD580053A8E2 /* FollowAreaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B94965F2B25AD580053A8E2 /* FollowAreaButton.swift */; };
 		3B9496622B25B39F0053A8E2 /* ImageGridItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9496612B25B39F0053A8E2 /* ImageGridItemView.swift */; };
 		3B9496652B2731220053A8E2 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9496642B2731220053A8E2 /* FeedView.swift */; };
+		3B9496682B2876F10053A8E2 /* FeedItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9496672B2876F10053A8E2 /* FeedItemView.swift */; };
+		3B94966A2B2879190053A8E2 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9496692B2879190053A8E2 /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		3B94965F2B25AD580053A8E2 /* FollowAreaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowAreaButton.swift; sourceTree = "<group>"; };
 		3B9496612B25B39F0053A8E2 /* ImageGridItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGridItemView.swift; sourceTree = "<group>"; };
 		3B9496642B2731220053A8E2 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		3B9496672B2876F10053A8E2 /* FeedItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemView.swift; sourceTree = "<group>"; };
+		3B9496692B2879190053A8E2 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				3B9496642B2731220053A8E2 /* FeedView.swift */,
+				3B9496662B2876DC0053A8E2 /* Component */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -219,6 +224,15 @@
 				3B9496612B25B39F0053A8E2 /* ImageGridItemView.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		3B9496662B2876DC0053A8E2 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				3B9496672B2876F10053A8E2 /* FeedItemView.swift */,
+				3B9496692B2879190053A8E2 /* HeaderView.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,7 +310,9 @@
 				3B9496622B25B39F0053A8E2 /* ImageGridItemView.swift in Sources */,
 				3B9496602B25AD580053A8E2 /* FollowAreaButton.swift in Sources */,
 				3B9495FC2B1C85620053A8E2 /* ContentView.swift in Sources */,
+				3B9496682B2876F10053A8E2 /* FeedItemView.swift in Sources */,
 				3B9496062B1C85630053A8E2 /* InstagramCloneApp.xcdatamodeld in Sources */,
+				3B94966A2B2879190053A8E2 /* HeaderView.swift in Sources */,
 				3B94965D2B24A7850053A8E2 /* ProfileEditAreaButton.swift in Sources */,
 				3B9495FA2B1C85620053A8E2 /* InstagramCloneAppApp.swift in Sources */,
 				3B94965A2B24A6370053A8E2 /* ProfileView.swift in Sources */,

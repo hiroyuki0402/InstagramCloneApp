@@ -12,59 +12,79 @@ struct FeedView: View {
 
     // MARK: - ボディー
     var body: some View {
-        VStack {
-            userIcon
+        NavigationStack {
+            ScrollView {
 
-            mainImage
+                HeaderView()
+
+                LazyVStack(spacing: 32) {
+                    ForEach(0...8, id: \.self) { item in
+                        FeedItemView(image: "apple")
+                    }
+                }
+
+            }
+            .toolbar {
+                /// ナビゲーションバーUserId
+                ToolbarItem(placement: .topBarLeading) {
+                    navigationBarUseridButton
+                }
+
+                /// アップロードメニュー
+                ToolbarItem(placement: .topBarTrailing) {
+                    navigationBarPlusButton
+                }
+
+                /// メニュー
+                ToolbarItem(placement: .topBarTrailing) {
+                    navigationBarMenuButton
+                }
+            }
         }
+
     }//: body
 }
 
 private extension FeedView {
+    /// ナビゲーションバーUserId
+    private var navigationBarUseridButton: some View {
+        Button {
 
-    private var userIcon: some View {
-        HStack {
-            Image("apple")
-                .resizable()
-                .scaledToFill()
-                .frame(width: 40, height: 40)
-            .clipShape(Circle())
-
-            Text("hiro")
-                .font(.footnote)
-                .fontWeight(.semibold)
-
-            Spacer()
-
-            Button {
-
-            } label: {
-                HStack(spacing: 0) {
-                    Text("・")
-                        .frame(width: 10)
-                    Text("・")
-                        .frame(width: 10)
-                    Text("・")
-                        .frame(width: 10)
-                }
-                .fontWeight(.bold)
+        } label: {
+            HStack {
+                Text("Instagram")
+                    .font(.title2)
+                    .fontWeight(.bold)
+                Image(systemName: "chevron.down")
+                    .font(.footnote)
             }
-
-
-
-
+            .foregroundStyle(.gray)
         }
-        .padding(.horizontal)
     }
 
-    private var mainImage: some View {
-        Image("apple")
-            .resizable()
-            .scaledToFill()
-            .frame(height: 350)
-            .frame(maxWidth: .infinity)
+    /// アップロードメニュー
+    private var navigationBarPlusButton: some View {
+        Button {
+
+        } label: {
+            Image(systemName: "heart")
+                .font(.title3)
+                .foregroundStyle(.gray)
+        }
+    }
+
+    /// メニュー
+    private var navigationBarMenuButton: some View {
+        Button {
+
+        } label: {
+            Image(systemName: "message")
+                .font(.title3)
+                .foregroundStyle(.gray)
+        }
     }
 }
+
 
 #Preview {
     FeedView()
